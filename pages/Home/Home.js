@@ -1,20 +1,14 @@
 import React, { PureComponent } from 'react';
 import Head from 'next/head';
-import { 
-  HomeWrapperStyled,
-  LeftContentWrapperStyled,
-  RightContentWrapperStyled,
- } from './styles';
+ import MainLayout from 'src/components/mainLayout';
 
 class Home extends PureComponent {
   render() {
-    return [
-      <Head />,
-      <HomeWrapperStyled>
-        <LeftContentWrapperStyled></LeftContentWrapperStyled>
-        <RightContentWrapperStyled></RightContentWrapperStyled>
-      </HomeWrapperStyled>
-    ];
+    return (
+      <MainLayout>
+        <div>this is Home</div>
+      </MainLayout>
+    );
   }
 }
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204" height="56" viewBox="0 0 204 56">
+    <defs>
+        <rect id="a" width="12" height="22" rx="1"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(2 1)">
+        <rect width="200" height="52" fill="#29B6F6" rx="4"/>
+        <text fill="#FFF" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400">
+            <tspan x="58" y="32">VISIT APP PAGE</tspan>
+        </text>
+        <g transform="translate(16 8)">
+            <rect width="24" height="33" fill="#FFF" rx="2"/>
+            <path fill="#29B6F6" d="M2 2h20v26H2z"/>
+            <circle cx="12.5" cy="30.5" r="1.5" fill="#29B6F6"/>
+        </g>
+        <g transform="translate(34 22)">
+            <use fill="#FFF" xlink:href="#a"/>
+            <rect width="13" height="23" x="-.5" y="-.5" stroke="#29B6F6" rx="1"/>
+            <path fill="#29B6F6" d="M1 2h10v16H1z"/>
+            <circle cx="6" cy="20" r="1" fill="#29B6F6"/>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import Head from 'next/head';
- import MainLayout from 'src/components/mainLayout';
+import MainLayout from 'src/components/mainLayout';
+import Footer from 'src/components/footer';
 
 class Home extends PureComponent {
   render() {

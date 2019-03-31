@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components';
 
 export const MenuWrapperStyled = styled.div`
-display: flex;
-height: 100%;
-align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 export const MenuItemStyled = styled.div`
 display: flex;

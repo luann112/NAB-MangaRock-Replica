@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const SideTabWrapperStyled = styled.div`
   display: flex;
+  z-index: 999;
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;

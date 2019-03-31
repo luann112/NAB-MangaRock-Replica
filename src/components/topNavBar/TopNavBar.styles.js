@@ -1,6 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const TopNavBarWrapperStyled = styled.div`
+  height: 92px;
+  background: #f5f5f5;
+  @media (max-width: 991px) {
+    height: 76px;
+  } 
+`;
+
+export const TopNavBarStyled = styled.div`
   display: flex;
   justify-content: space-between;
   height: 72px;
@@ -37,6 +45,7 @@ export const InnerWrapperStyled = styled.div`
 
 export const LogoStyled = styled.div`
   margin-right: 56px;
+  cursor: pointer;
   img {
     vertical-align: middle;
     @media (max-width: 991px) {

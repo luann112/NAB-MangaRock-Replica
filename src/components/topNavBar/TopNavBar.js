@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
+import Router from 'next/router';
 import { 
   TopNavBarWrapperStyled,
+  TopNavBarStyled,
   InnerWrapperStyled,
   LogoStyled,
   IconWrapperStyled,
@@ -21,29 +23,36 @@ class MainLayout extends PureComponent {
     }
   }
 
+  toHome = () => {
+    Router.push('/')
+  }
+
   render() {
     return (
       <TopNavBarWrapperStyled>
-        <InnerWrapperStyled left>
-          <LogoStyled>
-            <img src="./static/img/mr_logo_beta.svg"/>
-          </LogoStyled>
-          <Menu />
-        </InnerWrapperStyled>
-        <InnerWrapperStyled right>
-          <SearchBox />
-          <Button>SIGN IN</Button>
-        </InnerWrapperStyled>
-        <InnerWrapperStyled inSmallScreen>
-          <IconWrapperStyled>
-            <Icon type="search" />
-          </IconWrapperStyled>
-          <IconWrapperStyled onClick={this.openSideTab}>
-            <Icon type="bars" />
-          </IconWrapperStyled>
-        </InnerWrapperStyled>
-        <SideTab />
+        <TopNavBarStyled>
+          <InnerWrapperStyled left>
+            <LogoStyled onClick={this.toHome}>
+              <img src="./static/img/mr_logo_beta.svg"/>
+            </LogoStyled>
+            <Menu />
+          </InnerWrapperStyled>
+          <InnerWrapperStyled right>
+            <SearchBox />
+            <Button>SIGN IN</Button>
+          </InnerWrapperStyled>
+          <InnerWrapperStyled inSmallScreen>
+            <IconWrapperStyled>
+              <Icon type="search" />
+            </IconWrapperStyled>
+            <IconWrapperStyled onClick={this.openSideTab}>
+              <Icon type="bars" />
+            </IconWrapperStyled>
+          </InnerWrapperStyled>
+          <SideTab />
+        </TopNavBarStyled>
       </TopNavBarWrapperStyled>
+ 
     );
   }
 }

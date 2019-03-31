@@ -7,7 +7,6 @@ import {
  } from './MainLayout.styles';
  import TopNavbar from 'src/containers/topNavBar';
 
- import Footer from '../footer';
 
 class MainLayout extends PureComponent {
   render() {
@@ -19,7 +18,6 @@ class MainLayout extends PureComponent {
         <MainContentWrapperStyled>
           {children}
         </MainContentWrapperStyled>
-        <Footer />
       </MainLayoutWrapperStyled>
     ];
   }

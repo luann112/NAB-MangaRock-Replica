@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const SideTabWrapperStyled = styled.div`
   display: flex;
@@ -7,11 +7,14 @@ export const SideTabWrapperStyled = styled.div`
   min-height: 100vh;
   background-color: #fff;
   position: absolute;
-  left: 0;
-  top: 0;
-  visibility: visible;
   opacity: 1;
-  animation: ease .4s cubic-bezier(.305,.08,0,.87);
+  left: 100%;
+  top: 0;
+  transition: all 400ms ease;
+  ${props => props.isOpen && css`
+    left: 0;
+    top: 0;
+  `}
 `;
 export const SideTabHeaderStyled = styled.div`
   display: flex;
@@ -74,7 +77,7 @@ export const AvatarStyled = styled.div`
 export const CloseButtonStyled = styled.div`
   position: absolute;
   right: 16px;
-  top: 5px;
+  top: 10px;
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -87,8 +90,5 @@ export const CloseButtonStyled = styled.div`
   width: 32px;
   &:hover {
     background: lightgrey;
-  }
-  i {
-
   }
 `;

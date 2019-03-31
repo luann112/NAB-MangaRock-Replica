@@ -9,6 +9,7 @@ const logger = createLogger();
 
 const initializeStore = initialState => {
   let store;
+  console.log('process.env.NODE_ENV  - ', process.env.NODE_ENV )
   if (process.env.NODE_ENV === 'development') {
     const composeEnhancers = composeWithDevTools({});
     const devToolMiddleware = composeEnhancers(applyMiddleware(logger));

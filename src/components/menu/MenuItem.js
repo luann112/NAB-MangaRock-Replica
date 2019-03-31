@@ -25,7 +25,6 @@ class Menu extends PureComponent {
 
   render() {
     const { menuItem, isHaveSubMenu } = this.props;
-    console.log('isHaveSubMenu - ', isHaveSubMenu)
     return (
       <MenuItemStyled onClick={this.toggleSubMenu}>
         <span>{menuItem.label}</span>

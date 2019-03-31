@@ -9,9 +9,17 @@ import Menu from 'src/components/menu';
 import SearchBox from 'src/components/searchBox';
 import Button from 'src/components/button';
 import Icon from 'src/components/icon';
-import SideTab from 'src/components/sideTab';
+import SideTab from 'src/containers/sideTab';
 
 class MainLayout extends PureComponent {
+
+  openSideTab = () => {
+    const { openSideTab } = this.props;
+    console.log( 'openSideTab - ', openSideTab, this.props);
+    if (openSideTab && typeof openSideTab === 'function') {
+      openSideTab();
+    }
+  }
 
   render() {
     return (
@@ -30,11 +38,11 @@ class MainLayout extends PureComponent {
           <IconWrapperStyled>
             <Icon type="search" />
           </IconWrapperStyled>
-          <IconWrapperStyled>
+          <IconWrapperStyled onClick={this.openSideTab}>
             <Icon type="bars" />
           </IconWrapperStyled>
         </InnerWrapperStyled>
-        {/* <SideTab /> */}
+        <SideTab />
       </TopNavBarWrapperStyled>
     );
   }

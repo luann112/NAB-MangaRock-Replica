@@ -28,15 +28,24 @@ class SideTab extends Component {
       </SideTabMenuStyled>
     );
   }
+
+  closeSideTab = () => {
+    const { closeSideTab } = this.props;
+    if (closeSideTab && typeof closeSideTab === 'function') {
+      closeSideTab();
+    }
+  }
+
   render() {
+    const { isOpenSideTab } = this.props;
     return (
-      <SideTabWrapperStyled>
+      <SideTabWrapperStyled isOpen={isOpenSideTab}>
         <SideTabHeaderStyled>
           <AvatarStyled>
             <img src="./static/img/avatar_placeholder.svg " />
           </AvatarStyled>
           <Button>SIGN IN</Button>
-          <CloseButtonStyled>
+          <CloseButtonStyled onClick={this.closeSideTab}>
             <Icon type="times"/>
           </CloseButtonStyled>
         </SideTabHeaderStyled>

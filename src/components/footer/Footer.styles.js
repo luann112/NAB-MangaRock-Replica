@@ -8,7 +8,6 @@ export const FooterWrapperStyled = styled.div`
 
 export const InnerWrapperStyled = styled.div`
   display: flex;
-  width: 100%;
   height: 130px;  
   padding-right: 10px;
   padding-left: 10px;

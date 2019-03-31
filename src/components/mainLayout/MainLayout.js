@@ -4,7 +4,7 @@ import {
   MainLayoutWrapperStyled,
   MainContentWrapperStyled,
  } from './MainLayout.styles';
- import TopNavbar from '../topNavBar';
+ import TopNavbar from 'src/containers/topNavBar';
  import Footer from '../footer';
 
 class MainLayout extends PureComponent {
